@@ -1,0 +1,9 @@
+.card{
+    position: center;
+
+    flex-direction: column;
+}
+
+.content{
+    background-color: whitesmoke;
+}

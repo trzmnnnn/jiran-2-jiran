@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+
+
+
+.popup
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.contentBox
+{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background: #8ec1f8;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0,0, 0, 0.1 );
+}
+
+.contentBox .card
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox .card::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fefffd87;
+    border-radius: 50%;
+}
+
+.contentBox .card img{
+    position: relative;
+    max-width: 50px;
+    z-index: 1;
+}
+
+
+
+.close
+{
+
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    background: #f3f3f3 url(close.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}

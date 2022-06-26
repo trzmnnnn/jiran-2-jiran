@@ -1,0 +1,190 @@
+
+
+<?php require 'server.php' ?>
+
+<?php
+                            
+                            $q = mysqli_query($db, "SELECT * FROM useraccounts WHERE email='$_SESSION[email]' ;");
+                            
+                            ?>
+                            <?php $row = mysqli_fetch_assoc($q);
+                              $userID = $row['userID']; 
+                              $name = $row['name'];
+                              ?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Jiran2Jiran: Friendly Neighbourhood Sharing</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel=" stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/css/feathericon.min.css">
+	<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/8c212c06b6.js" crossorigin="anonymous"></script>
+</head>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>Jiran2Jiran</span>
+      </a>
+
+      
+                            
+                          
+                            
+                            
+                          
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="main.php">Halaman Utama</a></li>
+          <li class="dropdown"><a href="#"><span>Jenis Penyenaraian</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>  
+              <li><a href="myListing.php">Penyenaraian Saya</a></li>
+              <li><a href="myHelp.php">Kemas Kini Status Barang</a></li>
+              <li class="dropdown"><a href="#"><span>Tambah Penyenaraian</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="shareForm.php">Perkongsian Barang</a></li>
+                  <li><a href="requestForm.php">Permintaan Barang</a></li>
+                
+                </ul>
+              </li>
+             
+             
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Akaun</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="profile.php">Kemas Kini Profil</a></li>
+                  <li><a href="logout.php">Log Keluar</a></li>
+                
+                </ul>
+              </li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="main.php">Halaman Utama</a></li>
+          <li>Halaman Utama</li>
+        </ol>
+        <h6>Hai, <?php echo $name?> !
+        <a class="fa fa-bell" href="getNotification.php"></a></h6>
+      </div>
+      </h6>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+<div class="page-wrapper">
+	<div class="content container-fluid">
+		<div class="page-header mt-5">
+			<div class="row">
+				<div class="col">
+					<h3 class="page-title"><strong>Profil Saya</strong></h3>
+				
+				</div>
+			</div>
+		</div>
+	
+		<div class="tab-content profile-tab-cont">
+					<div class="tab-pane fade show active" id="per_details_tab">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title d-flex justify-content-between">
+											
+											
+											</h5>
+										<div class="row mt-5">
+										<img src="male-user.png" >
+										</div>
+									
+										
+											
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-9">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title d-flex justify-content-between">
+											<span>Maklumat Akaun</span>
+											<a class="edit-link" data-toggle="modal" href="myListing.php"><i class="fa fa-edit mr-1"></i>Edit</a>
+											</h5>
+										<div class="row mt-5">
+											<p class="col-sm-3 text-sm-right mb-0 mb-sm-3"><strong>Nama:</strong></p>
+											<p class="col-sm-9"><?php echo $row['name']?></p>
+										</div>
+									
+										<div class="row">
+											<p class="col-sm-3 text-sm-right mb-0 mb-sm-3"><strong>Emel:</strong></p>
+											<p class="col-sm-9" ><?php echo $row['email']?></p>
+										</div>
+										<div class="row">
+											 <p  class="col-sm-3 text-sm-right mb-0 mb-sm-3">
+												 <strong>Alamat Lokasi: </strong><br>  
+												 <p class="col-sm-9">
+
+												 <iframe  src='https://www.google.com/maps?q=<?php echo $row["latitude"];?>, <?php
+															echo $row["longitude"];?>&hl=es;z=14&output=embed' style="width: 300px;
+															height: 250px"></iframe></br></p>
+										</div>
+										   
+									</div>
+										</div>
+									</div>
+								</div>
